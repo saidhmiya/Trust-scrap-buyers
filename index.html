@@ -13,25 +13,27 @@
   }
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f9fafb;
-    color: #333;
-    line-height: 1.6;
+    background: linear-gradient(120deg, #e0e7ff 0%, #f9fafb 100%);
+    color: #23272f;
+    line-height: 1.7;
   }
   a {
-    color: #007BFF;
+    color: #0056b3;
     text-decoration: none;
+    font-weight: 500;
   }
   a:hover {
     text-decoration: underline;
+    color: #003366;
   }
   header {
-    background-color: #007BFF;
-    color: white;
-    padding: 20px 40px;
+    background: linear-gradient(90deg, #232526 0%, #0056b3 100%);
+    color: #fff;
+    padding: 24px 40px;
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
   nav {
     display: flex;
@@ -41,108 +43,146 @@
     margin: 0 auto;
   }
   nav .logo {
-    font-weight: 700;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: 2.5px;
+    color: #ffe066;
+    text-shadow: 1px 1px 4px #232526;
+    margin-right: 40px;
   }
   nav ul {
     list-style: none;
     display: flex;
+    gap: 0.5rem;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 6px 18px;
+    margin: 0;
   }
   nav ul li {
-    margin-left: 20px;
+    margin: 0 6px;
   }
   nav ul li a {
-    font-weight: 600;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background 0.2s, color 0.2s;
+    color: #0056b3;
+    background: transparent;
+    font-size: 1.08rem;
+    display: block;
   }
-  nav ul li a:hover {
-    background-color: rgba(255,255,255,0.2);
+  nav ul li a:hover, nav ul li a.active {
+    background: #ffe066;
+    color: #232526;
+    text-decoration: none;
   }
   main {
     max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 48px auto;
+    padding: 0 24px;
   }
   section {
-    margin-bottom: 60px;
+    margin-bottom: 64px;
   }
   h1, h2, h3 {
-    color: #007BFF;
+    color: #0056b3;
+    font-weight: 800;
+    letter-spacing: 1px;
   }
   .hero {
-    background: linear-gradient(135deg, #007BFF 0%, #00b4ff 100%);
-    color: white;
-    padding: 80px 20px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #0056b3 0%, #232526 100%);
+    color: #ffe066;
+    padding: 90px 20px 70px 20px;
+    border-radius: 16px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,123,255,0.3);
+    box-shadow: 0 10px 32px rgba(0,123,255,0.18);
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
   }
   .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 3.2rem;
+    margin-bottom: 22px;
+    z-index: 1;
+    position: relative;
+    color: #ffe066;
+    text-shadow: 1px 1px 8px #232526;
   }
   .hero p {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     max-width: 700px;
-    margin: 0 auto 30px;
+    margin: 0 auto 32px;
+    z-index: 1;
+    position: relative;
+    color: #fffbe6;
+    text-shadow: 1px 1px 6px #232526;
   }
   .btn-primary {
-    background-color: #ffc107;
-    color: #333;
-    font-weight: 700;
-    padding: 14px 28px;
+    background: linear-gradient(90deg, #ffe066 0%, #ffc107 100%);
+    color: #232526;
+    font-weight: 800;
+    padding: 16px 36px;
     border: none;
     border-radius: 40px;
     cursor: pointer;
-    box-shadow: 0 6px 12px rgba(255,193,7,0.5);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 18px rgba(255,193,7,0.18);
+    transition: background 0.2s, color 0.2s;
+    font-size: 1.1rem;
+    z-index: 1;
+    position: relative;
   }
   .btn-primary:hover {
-    background-color: #e6ac00;
+    background: #ffe066;
+    color: #0056b3;
   }
   .workflow-steps {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 36px;
   }
   .step {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    width: 240px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 36px 24px;
+    border-radius: 14px;
+    width: 260px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1.5px solid #e0e7ff;
   }
   .step:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,123,255,0.10);
+    border-color: #b6d4fe;
   }
   .step-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #007BFF;
-    margin-bottom: 15px;
+    font-size: 2.7rem;
+    font-weight: 800;
+    color: #ffc107;
+    margin-bottom: 18px;
   }
   .step-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #0056b3;
   }
   .step-desc {
-    font-size: 1rem;
-    color: #555;
+    font-size: 1.05rem;
+    color: #444;
   }
   .services-list {
     columns: 2;
-    font-size: 1.1rem;
-    color: #444;
+    font-size: 1.13rem;
+    color: #23272f;
+    padding-left: 16px;
   }
   .services-list li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    list-style: disc inside;
   }
   .testimonial-slider {
     position: relative;
@@ -150,67 +190,76 @@
     margin: 0 auto;
   }
   .testimonial {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    padding: 30px 40px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    padding: 36px 44px;
     font-style: italic;
-    color: #555;
+    color: #23272f;
     display: none;
+    border: 1.5px solid #e0e7ff;
   }
   .testimonial.active {
     display: block;
   }
   .testimonial .name {
-    margin-top: 20px;
-    font-weight: 700;
+    margin-top: 22px;
+    font-weight: 800;
     color: #007BFF;
     text-align: right;
+    font-size: 1.1rem;
   }
   .testimonial-controls {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
-    gap: 15px;
+    margin-top: 18px;
+    gap: 18px;
   }
   .testimonial-controls button {
     background: #007BFF;
     border: none;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s;
+    opacity: 0.4;
+    transition: opacity 0.2s, background 0.2s;
+    outline: 2px solid #fff;
   }
   .testimonial-controls button.active {
     opacity: 1;
+    background: #ffc107;
+    outline: 2px solid #007BFF;
   }
   form {
-    background: white;
+    background: #fff;
     max-width: 600px;
     margin: 0 auto;
-    border-radius: 12px;
-    padding: 30px 40px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-radius: 14px;
+    padding: 36px 44px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border: 1.5px solid #e0e7ff;
   }
   label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #007BFF;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #0056b3;
+    font-size: 1.08rem;
   }
   input[type="text"],
   input[type="email"],
   textarea,
   select {
     width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 20px;
-    border: 1.5px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    padding: 14px 16px;
+    margin-bottom: 22px;
+    border: 1.5px solid #b6d4fe;
+    border-radius: 9px;
+    font-size: 1.05rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #f4f8ff;
+    color: #23272f;
   }
   input[type="text"]:focus,
   input[type="email"]:focus,
@@ -218,56 +267,90 @@
   select:focus {
     border-color: #007BFF;
     outline: none;
+    box-shadow: 0 0 0 2px #b6d4fe;
   }
   textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 110px;
   }
   .faq-list {
     max-width: 800px;
     margin: 0 auto;
   }
   .faq-item {
-    margin-bottom: 16px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
+    margin-bottom: 18px;
+    border-bottom: 1.5px solid #e0e7ff;
+    padding-bottom: 18px;
   }
   .faq-question {
-    font-weight: 700;
-    color: #007BFF;
+    font-weight: 800;
+    color: #0056b3;
     cursor: pointer;
     position: relative;
-    padding-right: 20px;
+    padding-right: 24px;
+    font-size: 1.13rem;
   }
   .faq-question::after {
     content: '+';
     position: absolute;
     right: 0;
     top: 0;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s;
+    color: #ffc107;
   }
   .faq-item.open .faq-question::after {
     transform: rotate(45deg);
   }
   .faq-answer {
-    margin-top: 8px;
-    color: #444;
+    margin-top: 10px;
+    color: #23272f;
     display: none;
+    font-size: 1.05rem;
   }
   .faq-item.open .faq-answer {
     display: block;
   }
   footer {
-    background-color: #007BFF;
-    color: white;
+    background: linear-gradient(90deg, #0056b3 0%, #007BFF 100%);
+    color: #fff;
     text-align: center;
-    padding: 25px 20px;
-    font-size: 0.9rem;
+    padding: 28px 20px 40px 20px;
+    font-size: 1rem;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    margin-top: 48px;
+    position: relative;
+  }
+  footer a {
+    color: #ffe066;
+    font-weight: 600;
+    text-decoration: underline;
   }
 
   /* Responsive */
+  @media (max-width: 900px) {
+    main {
+      max-width: 98vw;
+      padding: 0 8px;
+    }
+    .workflow-steps {
+      gap: 18px;
+    }
+    .step {
+      width: 90vw;
+      max-width: 340px;
+    }
+    nav ul {
+      padding: 4px 6px;
+      gap: 0.2rem;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      margin-right: 10px;
+    }
+  }
   @media (max-width: 768px) {
     .workflow-steps {
       flex-direction: column;
@@ -275,6 +358,93 @@
     }
     .services-list {
       columns: 1;
+    }
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+    .hero {
+      padding: 32px 4px 24px 4px;
+      border-radius: 10px;
+    }
+    form {
+      padding: 16px 4px;
+      border-radius: 10px;
+    }
+    .testimonial {
+      padding: 16px 4px;
+      border-radius: 10px;
+    }
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      width: 100%;
+    }
+    nav ul {
+      flex-direction: row;
+      overflow-x: auto;
+      white-space: nowrap;
+      width: 100vw;
+      min-width: 100vw;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0 0 0 4px;
+      background: #fff;
+      margin: 0 -24px;
+      scrollbar-width: none;
+    }
+    nav ul::-webkit-scrollbar {
+      display: none;
+    }
+    nav ul li {
+      margin: 0 2px;
+      display: inline-block;
+    }
+    nav ul li a {
+      padding: 10px 12px;
+      border-radius: 18px;
+      font-size: 0.98rem;
+      text-align: center;
+      min-width: 90px;
+      display: inline-block;
+    }
+    header {
+      padding: 12px 0 0 0;
+    }
+    nav .logo {
+      font-size: 1.2rem;
+      margin: 0 0 8px 8px;
+    }
+  }
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 1.1rem;
+    }
+    .hero p {
+      font-size: 1rem;
+    }
+    .btn-primary {
+      padding: 10px 18px;
+      font-size: 0.95rem;
+    }
+    .step {
+      padding: 18px 4px;
+      width: 98vw;
+      max-width: 98vw;
+    }
+    .testimonial {
+      padding: 10px 2px;
+    }
+    form {
+      padding: 10px 2px;
+    }
+    footer {
+      font-size: 0.85rem;
+      padding: 16px 4px 32px 4px;
+      border-radius: 8px 8px 0 0;
+    }
+    nav .logo {
+      font-size: 1.1rem;
     }
   }
 </style>
@@ -428,7 +598,8 @@
 
 <footer>
   <p>© 2024 Trusted Scrap Buyers. All rights reserved.</p>
-  <p>Contact us: <a href="mailto:info@trustedscrapbuyers.com" style="color: #ffe066;">info@trustedscrapbuyers.com</a> | Phone: <a href="tel:+1234567890" style="color:#ffe066;">+1 (234) 567-890</a></p>
+  <p>Contact us: <a href="mailto:trustscrap.net@gmail.com" style="color: #ffe066;">trustscrap.net@gmail.com</a> | Phone: <a href="tel:+9180088997047" style="color:#ffe066;">8008997047</a></p>
+  <div style="position:fixed;bottom:10px;right:10px;opacity:0.25;font-size:1.1rem;pointer-events:none;z-index:9999;user-select:none;">Made by Nithinvarma</div>
 </footer>
 
 <script>
@@ -475,16 +646,36 @@
       form.reportValidity();
       return;
     }
-    messageParagraph.textContent = '';
-    // Simulate sending data
-    messageParagraph.style.color = '#007BFF';
-    messageParagraph.textContent = 'Sending your request...';
+    // Collect form data
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const material = document.getElementById('material').value;
+    const details = document.getElementById('details').value.trim();
 
+    // Compose WhatsApp message
+    let message = `New Scrap Quote Request:%0A`;
+    message += `Name: ${name}%0A`;
+    message += `Email: ${email}%0A`;
+    message += `Phone: ${phone}%0A`;
+    message += `Material: ${material}%0A`;
+    if(details) message += `Details: ${details}%0A`;
+
+    // WhatsApp API link
+    const whatsappNumber = '918008997047'; // Country code +91 for India
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+
+    // Show message to user
+    messageParagraph.style.color = '#007BFF';
+    messageParagraph.textContent = 'Redirecting to WhatsApp...';
     setTimeout(() => {
       messageParagraph.style.color = 'green';
-      messageParagraph.textContent = 'Thank you! Your quote request has been received. We will contact you shortly.';
+      messageParagraph.textContent = 'Thank you! Your quote request has been sent via WhatsApp.';
       form.reset();
-    }, 1500);
+    }, 2000);
   });
 </script>
 
