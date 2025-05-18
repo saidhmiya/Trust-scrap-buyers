@@ -512,7 +512,7 @@
 
 <footer>
   <p>© 2024 Trusted Scrap Buyers. All rights reserved.</p>
-  <p>Contact us: <a href="mailto:info@trustedscrapbuyers.com" style="color: #ffe066;">info@trustedscrapbuyers.com</a> | Phone: <a href="tel:+1234567890" style="color:#ffe066;">+1 (234) 567-890</a></p>
+  <p>Contact us: <a href="mailto:trustscrap.net@gmail.com" style="color: #ffe066;">trustscrap.net@gmail.com</a> | Phone: <a href="tel:+9180088997047" style="color:#ffe066;">8008997047</a></p>
   <div style="position:fixed;bottom:10px;right:10px;opacity:0.25;font-size:1.1rem;pointer-events:none;z-index:9999;user-select:none;">Made by Nithinvarma</div>
 </footer>
 
@@ -560,19 +560,38 @@
       form.reportValidity();
       return;
     }
-    messageParagraph.textContent = '';
-    // Simulate sending data
-    messageParagraph.style.color = '#007BFF';
-    messageParagraph.textContent = 'Sending your request...';
+    // Collect form data
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const material = document.getElementById('material').value;
+    const details = document.getElementById('details').value.trim();
 
+    // Compose WhatsApp message
+    let message = `New Scrap Quote Request:%0A`;
+    message += `Name: ${name}%0A`;
+    message += `Email: ${email}%0A`;
+    message += `Phone: ${phone}%0A`;
+    message += `Material: ${material}%0A`;
+    if(details) message += `Details: ${details}%0A`;
+
+    // WhatsApp API link
+    const whatsappNumber = '918008997047'; // Country code +91 for India
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+
+    // Show message to user
+    messageParagraph.style.color = '#007BFF';
+    messageParagraph.textContent = 'Redirecting to WhatsApp...';
     setTimeout(() => {
       messageParagraph.style.color = 'green';
-      messageParagraph.textContent = 'Thank you! Your quote request has been received. We will contact you shortly.';
+      messageParagraph.textContent = 'Thank you! Your quote request has been sent via WhatsApp.';
       form.reset();
-    }, 1500);
+    }, 2000);
   });
 </script>
 
 </body>
 </html>
-
