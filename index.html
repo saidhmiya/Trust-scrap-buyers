@@ -27,7 +27,7 @@
     color: #003366;
   }
   header {
-    background: linear-gradient(90deg, #0056b3 0%, #007BFF 100%);
+    background: linear-gradient(90deg, #232526 0%, #0056b3 100%);
     color: #fff;
     padding: 24px 40px;
     position: sticky;
@@ -43,30 +43,40 @@
     margin: 0 auto;
   }
   nav .logo {
-    font-weight: 800;
-    font-size: 2.1rem;
+    font-weight: 900;
+    font-size: 2.2rem;
     letter-spacing: 2.5px;
     color: #ffe066;
-    text-shadow: 1px 1px 4px #0056b3;
+    text-shadow: 1px 1px 4px #232526;
+    margin-right: 40px;
   }
   nav ul {
     list-style: none;
     display: flex;
+    gap: 0.5rem;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    padding: 6px 18px;
+    margin: 0;
   }
   nav ul li {
-    margin-left: 20px;
+    margin: 0 6px;
   }
   nav ul li a {
-    font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 6px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 30px;
     transition: background 0.2s, color 0.2s;
-    color: #fff;
-    background: transparent;
-  }
-  nav ul li a:hover {
-    background: #ffe066;
     color: #0056b3;
+    background: transparent;
+    font-size: 1.08rem;
+    display: block;
+  }
+  nav ul li a:hover, nav ul li a.active {
+    background: #ffe066;
+    color: #232526;
+    text-decoration: none;
   }
   main {
     max-width: 1100px;
@@ -82,8 +92,8 @@
     letter-spacing: 1px;
   }
   .hero {
-    background: linear-gradient(135deg, #007BFF 0%, #00b4ff 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #0056b3 0%, #232526 100%);
+    color: #ffe066;
     padding: 90px 20px 70px 20px;
     border-radius: 16px;
     text-align: center;
@@ -92,22 +102,13 @@
     position: relative;
     overflow: hidden;
   }
-  .hero::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    width: 200%;
-    height: 200px;
-    background: radial-gradient(circle, #ffe06655 0%, transparent 80%);
-    transform: translate(-50%, -50%);
-    z-index: 0;
-  }
   .hero h1 {
     font-size: 3.2rem;
     margin-bottom: 22px;
     z-index: 1;
     position: relative;
+    color: #ffe066;
+    text-shadow: 1px 1px 8px #232526;
   }
   .hero p {
     font-size: 1.35rem;
@@ -115,10 +116,12 @@
     margin: 0 auto 32px;
     z-index: 1;
     position: relative;
+    color: #fffbe6;
+    text-shadow: 1px 1px 6px #232526;
   }
   .btn-primary {
     background: linear-gradient(90deg, #ffe066 0%, #ffc107 100%);
-    color: #23272f;
+    color: #232526;
     font-weight: 800;
     padding: 16px 36px;
     border: none;
